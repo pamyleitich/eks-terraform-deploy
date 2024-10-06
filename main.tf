@@ -94,8 +94,8 @@ module "terraform_node" {
   key_name      = var.key_name
   main-region   = var.main-region
 }
-*/
 
+*/
  module "s3_dynamodb" {
   source = "./modules/s3-dynamodb"
   bucket = var.s3_bucket
