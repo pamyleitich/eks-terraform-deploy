@@ -1,4 +1,4 @@
-
+/*
 provider "aws" {
   region = us-west-2
   alias  = "us-west-2"
@@ -42,5 +42,4 @@ provider "helm" {
 #   depends_on = [module.eks]
 #   name       = module.eks.cluster_name
 # }
-
-
+*/

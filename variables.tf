@@ -2,7 +2,7 @@
 ################################################################################
 # Default Variables
 ################################################################################
-
+/*
 variable "main-region" {
   type    = string
   default = "us-west-2"
@@ -97,15 +97,15 @@ variable "key_name" {
   type        = string
   default     = "DevOps_key"
 }
+*/
+variable "s3_bucket" {
+  description = "The name of the S3 bucket for storing Terraform state"
+ type        = string
+  default     = "eksprojectpamy"
+}
 
-# variable "s3_bucket" {
-#   description = "The name of the S3 bucket for storing Terraform state"
-#   type        = string
-#   default     = "terraform-state-bucket-fusi"
-# }
-
-# variable "dynamodb_table" {
-#   description = "The name of the DynamoDB table for state locking"
-#   type        = string
-#   default     = "terraform-lock-table"
-# }
+ variable "dynamodb_table" {
+  description = "The name of the DynamoDB table for state locking"
+  type        = string
+  default     = "dynamodbpamy"
+}
