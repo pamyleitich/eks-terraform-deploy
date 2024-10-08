@@ -1,7 +1,7 @@
 ################################################################################
 # EKS Cluster
 ################################################################################
-/*
+
 output "cluster_arn" {
   description = "The Amazon Resource Name (ARN) of the cluster"
   value       = module.eks.cluster_arn
@@ -42,7 +42,7 @@ output "private_subnets" {
 }
 
 
-
+/*
 ################################################################################
 # Prometheus Workspace
 ################################################################################
@@ -113,5 +113,10 @@ output "s3_bucket" {
    description = "Name of the DynamoDB table for state locking"
    value       = module.s3_dynamodb.table
  }
+<<<<<<< HEAD
 */
 
+=======
+
+*/
+>>>>>>> e20bd21df083ec1030f15451fe55a4b31eeeecc7

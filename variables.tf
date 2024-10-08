@@ -1,4 +1,4 @@
-
+/*
 ################################################################################
 # Default Variables
 ################################################################################
@@ -8,7 +8,7 @@ variable "main-region" {
   default = "us-west-2"
 }
 
-/*
+
 ################################################################################
 # EKS Cluster Variables
 ################################################################################
@@ -97,7 +97,10 @@ variable "key_name" {
   type        = string
   default     = "pamyeksproject"
 }
+<<<<<<< HEAD
 /*
+=======
+>>>>>>> e20bd21df083ec1030f15451fe55a4b31eeeecc7
 
 variable "s3_bucket" {
   description = "The name of the S3 bucket for storing Terraform state"
@@ -112,4 +115,8 @@ variable "s3_bucket" {
   default     = "dynamodbpamy"
 
 }
+<<<<<<< HEAD
 */
+=======
+*/
+>>>>>>> e20bd21df083ec1030f15451fe55a4b31eeeecc7

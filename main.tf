@@ -38,7 +38,7 @@ module "aws_alb_controller" {
 ################################################################################
 # Managed Grafana Module
 ################################################################################
-
+/*
 module "managed_grafana" {
   source             = "./modules/grafana"
   env_name           = var.env_name
@@ -77,8 +77,13 @@ module "vpcendpoints" {
   private_subnets           = module.vpc.private_subnets
   grafana_security_group_id = module.managed_grafana.security_group_id
 }
+<<<<<<< HEAD
 
 */
+=======
+*/
+
+>>>>>>> e20bd21df083ec1030f15451fe55a4b31eeeecc7
 module "jenkins_server" {
   source        = "./modules/jenkins-server"
   ami_id        = var.ami_id
@@ -98,12 +103,19 @@ module "jenkins_server" {
 }
 
 
+<<<<<<< HEAD
 
 /*
+=======
+>>>>>>> e20bd21df083ec1030f15451fe55a4b31eeeecc7
  module "s3_dynamodb" {
   source = "./modules/s3-dynamodb"
   //bucket = var.s3_bucket
   table  = var.dynamodb_table
  region = var.main-region
  }
+<<<<<<< HEAD
 */
+=======
+
+>>>>>>> e20bd21df083ec1030f15451fe55a4b31eeeecc7
