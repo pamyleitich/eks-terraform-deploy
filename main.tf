@@ -1,7 +1,7 @@
 ################################################################################
 # VPC Module
 ################################################################################
-/*
+
 module "vpc" {
   source      = "./modules/vpc"
   main-region = var.main-region
@@ -38,7 +38,7 @@ module "aws_alb_controller" {
 ################################################################################
 # Managed Grafana Module
 ################################################################################
-
+/*
 module "managed_grafana" {
   source             = "./modules/grafana"
   env_name           = var.env_name
@@ -95,10 +95,11 @@ module "terraform_node" {
   main-region   = var.main-region
 }
 
-*/
+
  module "s3_dynamodb" {
   source = "./modules/s3-dynamodb"
   bucket = var.s3_bucket
   table  = var.dynamodb_table
  region = var.main-region
  }
+*/
