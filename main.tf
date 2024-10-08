@@ -77,7 +77,7 @@ module "vpcendpoints" {
   private_subnets           = module.vpc.private_subnets
   grafana_security_group_id = module.managed_grafana.security_group_id
 }
-
+*/
 
 module "jenkins_server" {
   source        = "./modules/jenkins-server"
@@ -95,7 +95,7 @@ module "terraform_node" {
   main-region   = var.main-region
 }
 
-
+/*
  module "s3_dynamodb" {
   source = "./modules/s3-dynamodb"
   bucket = var.s3_bucket
