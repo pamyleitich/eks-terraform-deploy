@@ -1,7 +1,7 @@
 ################################################################################
 # VPC Module
 ################################################################################
-/*
+
 module "vpc" {
   source      = "./modules/vpc"
   main-region = var.main-region
@@ -34,7 +34,7 @@ module "aws_alb_controller" {
   vpc_id            = module.vpc.vpc_id
   oidc_provider_arn = module.eks.oidc_provider_arn
 }
-
+/*
 ################################################################################
 # Managed Grafana Module
 ################################################################################
@@ -78,16 +78,18 @@ module "vpcendpoints" {
   grafana_security_group_id = module.managed_grafana.security_group_id
 }
 
-
+*/
 module "jenkins_server" {
   source        = "./modules/jenkins-server"
   ami_id        = var.ami_id
   instance_type = var.instance_type
   key_name      = var.key_name
   main-region   = var.main-region
+ 
 }
 
-module "terraform_node" {
+
+ module "terraform_node" {
   source        = "./modules/terraform_node"
   ami_id        = var.ami_id
   instance_type = var.instance_type
@@ -95,10 +97,13 @@ module "terraform_node" {
   main-region   = var.main-region
 }
 
-*/
+
+
+/*
  module "s3_dynamodb" {
   source = "./modules/s3-dynamodb"
-  bucket = var.s3_bucket
+  //bucket = var.s3_bucket
   table  = var.dynamodb_table
  region = var.main-region
  }
+*/

@@ -66,7 +66,6 @@ variable "env_name" {
 # variable "private_subnets" {
 #   description = "A list of private subnets"
 #   type        = list(string)
-# }
 
 ################################################################################
 # AWS SSO Variables
@@ -79,11 +78,12 @@ variable "sso_admin_group_id" {
   default     = "b4f8f4f8-e011-7046-0637-993dc10edd76"
 }
 
-# variable "ami_id" {
-#   description = "The AMI ID for the instances"
-#   type        = string
-#   default     = "ami-03c983f9003cb9cd1"
-# }
+
+variable "ami_id" {   
+  description = "The AMI ID for the instances"
+   type        = string
+   default     = "ami-04dd23e62ed049936"
+ }
 
 variable "instance_type" {
   description = "The instance type for the instances"
@@ -95,17 +95,21 @@ variable "instance_type" {
 variable "key_name" {
   description = "The key name for the instances"
   type        = string
-  default     = "DevOps_key"
+  default     = "pamyeksproject"
 }
-*/
+/*
+
 variable "s3_bucket" {
   description = "The name of the S3 bucket for storing Terraform state"
  type        = string
   default     = "eksprojectpamy"
 }
 
+
  variable "dynamodb_table" {
   description = "The name of the DynamoDB table for state locking"
   type        = string
   default     = "dynamodbpamy"
+
 }
+*/
