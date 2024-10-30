@@ -4,13 +4,13 @@ pipeline {
                 choice(name: 'Deployment_Type', choices:['apply','destroy'],description:'The deployment type')
                   }
     environment {
-        EMAIL_TO = 'fusisoft@gmail.com'
+        EMAIL_TO = 'pamyleitich@gmail.com'
     }
     stages {
         stage('1.Terraform init') {
             steps {
                 echo 'terraform init phase'
-                sh 'terraform init'
+                sh 'terraform init -reconfigure'
             }
         }
         stage('2.Terraform plan') {
@@ -41,7 +41,7 @@ pipeline {
                 }
         stage ('5. Email Notification') {
             steps {
-               mail bcc: 'fusisoft@gmail.com', body: '''Terraform deployment is completed.
+               mail bcc: 'pamyleitich@gmail.com', body: '''Terraform deployment is completed.
                Let me know if the changes look okay.
                Thanks,
                Dominion System Technologies,
